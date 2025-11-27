@@ -19,15 +19,15 @@ ua = UserAgent(platforms='desktop')
 async def create_webhook(title, link, youtube_name, date):
     async with aiohttp.ClientSession() as session:
         # url is the discord webhook url, this allows us to post
-        discord_webhook_url = # enter a webhook url here
+        discord_webhook_url = https://discord.com/api/webhooks/1443745941625639097/JowGi2afqOfNCamW6nUCtmcgltRZwtieuiqZWOwfhBCedxMn9eDD8fPZ6NjO3jJ5FOAG # enter a webhook url here
         webhook = Webhook.from_url(discord_webhook_url, session=session)
 
         # https://docs.disnake.dev/en/latest/api/webhooks.html#disnake.Webhook.send
         # username = name of webhook user
         ## await send(content=..., *, username=..., avatar_url=..., tts=False, ephemeral=..., suppress_embeds=..., flags=..., file=..., files=..., embed=..., embeds=..., allowed_mentions=..., view=..., components=..., thread=..., thread_name=..., applied_tags=..., wait=False, delete_after=..., poll=...)
 
-        webhook_username = YouTube Bot # enter name of the Webhook user, can be anything (in this case, it's YouTube Bot)
-        webhook_avatar = "https://i.imgur.com/22Q9QyJ.png" # enter a url to a pic if you want a avatar
+        webhook_username = Sisyphxs on YouTube # enter name of the Webhook user, can be anything (in this case, it's YouTube Bot)
+        webhook_avatar = "https://cdn.pfps.gg/pfps/4134-makima-chainsaw-man-user-picture.png" # enter a url to a pic if you want a avatar
         await webhook.send(content=f"NEW UPLOAD FROM {youtube_name}!\n'{title}'\n{link}\n{date}", username=webhook_username, avatar_url=webhook_avatar)
         await asyncio.sleep(3)
 
